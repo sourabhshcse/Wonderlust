@@ -1,0 +1,44 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <br/>
+    <div class="row">
+        <div class="col-8 offset-2">
+    <h3>Create a new listing</h3>
+    <br/>
+    <form method="POST" action="/listings" novalidate class="needs-validation">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input name="listing[title]" placeholder="Enter a catchy title" type="text" class="form-control" required>  
+            <div class="valid-feedback"> Looks good!</div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="listing[description]" class="form-control" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Image Link</label>
+            <input name="listing[image]" placeholder="enter image url" class="form-control">
+        </div>
+        <div class="row">
+            <div class="mb-3 col-md-4">
+                <label for="price" class="form-label">Price</label>
+                <input name="listing[price]" placeholder="1200" class="form-control" required>
+                <div class="valid-feedback">Please Enter a valid price</div>
+            </div>
+            <div class="mb-3 col-md-8">
+                <label for="country" class="form-label">Country</label>
+                <input name="listing[country]" placeholder="india" type="text" class="form-control" required>
+                <div class="valid-feedback">Please Enter a valid country name</div>
+            </div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="loaction" class="form-label">Loaction</label>
+            <input name="listing[location]" placeholder="Godda, Dumka, Ranchi ..." type="text" class="form-control">
+        </div>
+        <button class=" btn btn-dark add-btn">Add</button>
+    </form>
+    <br/><br/><br/>
+</div>
+</div>
+</body>
